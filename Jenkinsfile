@@ -44,14 +44,16 @@ pipeline {
                 }
 
                 stage('Deploy') {
-                    steps {
-                        sh '''
-                            docker compose down || true
-                            docker compose build --no-cache
-                            docker compose up -d
-                        '''
-                    }
-                }
+                            steps {
+                                sh '''
+                                    echo "⚡ 구형 docker-compose 규격으로 인프라 기동..."
+                                    # 💡 하이픈(-)을 붙여서 젠킨스가 가진 레거시 바이너리를 타겟팅!
+                                    docker-compose down || true
+                                    docker-compose build
+                                    docker-compose up -d
+                                '''
+                            }
+                        }
 
                 stage('Check Containers') {
                     steps {
