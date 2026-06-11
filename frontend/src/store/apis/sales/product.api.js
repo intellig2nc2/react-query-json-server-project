@@ -1,4 +1,4 @@
-import {rootApi} from "./root.api.js"
+import {rootApi} from "../root.api.js";
 
 export const productAllGetApi = async () => {
     try {
