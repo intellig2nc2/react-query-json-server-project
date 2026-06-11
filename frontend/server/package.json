@@ -1,0 +1,17 @@
+{
+   "name": "my-json-server-project",
+   "version": "1.0.0",
+   "description": "",
+   "main": "index.js",
+   "scripts": {
+      "start": "json-server --watch db.json --port 3001"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "dependencies": {
+      "@tanstack/react-query": "^5.101.0",
+      "axios": "^1.17.0",
+      "json-server": "^0.17.4"
+   }
+}
