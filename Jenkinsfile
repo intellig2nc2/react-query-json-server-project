@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git branch: 'main', url: 'YOUR_REPO_URL'
-            }
-        }
-
         stage('Install') {
             steps {
                 dir('frontend') {
