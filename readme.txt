@@ -11,8 +11,8 @@ docker run -d `
   -v /var/run/docker.sock:/var/run/docker.sock `
   jenkins-server
 
-  비밀번호
- 22a7a14fbbbc4d7fbb596aa548e75630
+비밀번호
+22a7a14fbbbc4d7fbb596aa548e75630
 
 jenkins 서버 설정
 파이프라인-> SCM(Definition) -> Repository URL(깃허브 code에서 복붙) -> Branch Specifier(master-> main)
