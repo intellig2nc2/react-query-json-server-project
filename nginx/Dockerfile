@@ -1,17 +1,7 @@
-server {
-    listen 80;
-    server_name localhost;
+FROM nginx:alpine
 
-    root /usr/share/nginx/html;
-    index index.html;
+COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
 
-    location / {
-        try_files $uri $uri/ /index.html;
-    }
+COPY frontend/dist /usr/share/nginx/html
 
-    location /api/ {
-        proxy_pass http://backend:8080/;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-    }
-}
+EXPOSE 80
